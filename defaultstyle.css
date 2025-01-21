@@ -1,0 +1,36 @@
+:root {
+    /* COLORS */
+    --tan: #d9a066;
+    --darktan: #cf8a61;
+    --lighttan: #eec39a;
+    --creamywhite: #faecea;
+
+    --bloodorange: #ac3c1e;
+    --darkred: #792216;
+
+    --lightblue: #3b759e;
+    --shadeblue: #306082;
+    --darkblue: #1d394d;
+
+    --lightpurple: #524881;
+    --shadepurple: #362a4b;
+    --darkpurple: #22182b;
+
+    /* FONTS */
+    --roboto: font-family: "Trirong", serif;
+
+}
+
+.roboto-body {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+.bodyparagraph {
+    color: var(--creamywhite);
+}
