@@ -35,6 +35,7 @@ header {
 body {
     background-color: var(--shadepurple);
     margin: 0px;
+    height: 100%;
 }
 
 /* CUSTOM COMPONENTS */
