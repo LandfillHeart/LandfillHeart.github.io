@@ -1,80 +1,98 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="defaultstyle.css">
+        <link rel="stylesheet" type="text/css" href="landfillstyle.css">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
-
-    <header>
-        <h2 class="roboto-lighttan header-centered-button">About Me</h2>
-        <h2 class="roboto-lighttan header-centered-button">Experience & Projects</h2>
-        <h2 class="roboto-lighttan header-centered-button">Contact</h2>
-    </header>
-
     <body>
-        <div class="title-section">
-            <h1 class="roboto-white title-font-details">Landfill Heart</h1>
+        <div class="landfill-card">
+            <!-- TITLE AND CONTACTS -->
+            <p class="roboto-lighttan card-title">Ray Kimbler - Game Programmer - Systems, UI, Unity</p>
+            <p class="roboto-lighttan card-subtitle">Email: landfillheartdev@gmail.com <br>Discord: rayspizzashop</p>
+            <!-- EXPERIENCE -->
+            <p class="roboto-white card-title">Experience</p>
+            
+            <div id="ERA-ONE" class="card-block">
+                <p class="roboto-white card-title">Era One</p>
+                <iframe class="card-video-link" src="https://www.youtube.com/watch?v=x5wvsx79bVQ">
+                </iframe>
+                
+                <br>
+                <p class="roboto-white card-subtitle">July 2023 - September 2024</p>
+                <br>
+                <p class="roboto-white card-text">I joined the team late in development, so I developed features that would best utilize existing systems and mechanics.<br> Some interesting things I did: </p>
+                <p class="roboto-white card-subtitle">Systems</p>
+                <p class="roboto-white card-paragraph-title">Dynamic Music</p>
+                <p class="roboto-white card-text">A Music Manager holds a playlist for ambience and combat.
+                    When combat starts, the Music Manager is alerted and fades into the combat music playlist.
+                    After a set amount of time, if no new combat event has been fired (which would mean combat is over), the music fades back into the ambience playlist.
+                </p>
+                <p class="roboto-white card-paragraph-title">Units Level Up with ECS</p>
+                <p class="roboto-white card-text">Units can get experience by killing enemies. Once they reach an experience threshold, they level up. The highest level unit of each category is assigned as leader, and gets stat bonuses. 
+                    If the leader dies or another unit of the same category surpasses it in level, leadership is passed onto the new highest level unit.
+                    To prevent leadership to be constantly changed during combat scenarios with high casualties and experience rewards, the assignment of leader happens only on a set timer. <br>
+                    The level up system applies the ECS pattern: units (entities) provide access to their Experience script (component) which simply holds information processed by the Leadership Manager (system).
+                </p>
+
+                <p class="roboto-white card-subtitle">UI</p>
+                <p class="roboto-white card-paragraph-title">Minimap</p>
+                <p class="roboto-white card-text">A minimap that can be used to see your units and detected enemies.
+                    The minimap can be set on any friendly unit or base as an anchor, and everything is displayed relative to their distance to the minimap anchor.
+                    Clicking on the minimap will take your camera to a position on the map, based on direction and distance relative to the minimap anchor.
+                </p>
+                <p class="roboto-white card-paragraph-title">Armor and Health Bars</p>
+                <p class="roboto-white card-text">Building armor modules will increase the max health of other modules on your base. 
+                    To display the difference between a module's health and the bonus health granted by armor, part of the health bar is green (base hp) and the other part is orange and black striped (bonus health). 
+                    The size of these sections depends on the percentage of hp they provide to the total health of the module.
+                </p>
+                <p class="roboto-white card-paragraph-title">Camera Shortcuts</p>
+                <p class="roboto-white card-text">Using the command panel, you can set a friendly or neutral unit as a camera anchor. This creates a button on your center bar, which will redirect the camera towards that unit when pressed.
+                    If the button was created by selecting multiple units, a small +n icon will indicate how many units are part of that group. This icon updates when units die to represent the reduced number.
+                </p>
+                <p class="roboto-white card-paragraph-title">Game Events, Notifications, and Missions</p>
+                <p class="roboto-white card-text">Panels will let players see different kind of information, such as ongoing and beaten missions, messages from their crew about events such as enemy activity and the assignment of leaders, and game events such as construction states and combat. Some of these panels can be minimized to reduce screen clutter.
+                    These and other UI elements will flash different at different intensities to alert the player, such as the missions panel flashing lightly when it has been minimized and a new mission has been assigned, or the energy and resource buttons flashing red when reaching critical conditions.
+                </p>
+            </div>
+            <!-- PROJECTS -->
+            <p class="roboto-white card-title">Projects</p>
+            <div id="ANNE-PHIBIAN" class="card-block">
+                <p class="roboto-white card-title">Anne Phibian</p>
+                <img class="card-image-wide" src="anne-phibian-preview.jpg">
+                
+                <p class="roboto-white card-paragraph-title">Resolve the mysterious death of a journalist in this retro futuristic adventure</p>
+                <span class="roboto-white card-text">itch.io:</span> <span><a href="https://landfillheart.itch.io/anne-phibian" class="roboto-white card-text">https://landfillheart.itch.io/anne-phibian</a></span> <br>
+                <span class="roboto-white card-text">github:</span> <span><a href="https://landfillheart.itch.io/anne-phibian" class="roboto-white card-text">https://github.com/LandfillHeart/Anne-Phibian-Game-Off-2024</a></span> <br>
+                <span class="roboto-white card-text">artist:</span> <span><a href="https://landfillheart.itch.io/anne-phibian" class="roboto-white card-text">https://www.instagram.com/froo.gss/</a></span>
+                <p class="roboto-white card-text">Anne Phibian is a short point-and-click game I made for the Game Off 2024 game jam. It features a simple point-and-click system, interactive objects, puzzles, and a dialogues.</p>
+            </div>
+
+            <div id="TAEKWONDOUGH">
+                <p class="roboto-white card-title">Taekwondough</p>
+                <img class="card-image-wide" src="taekwondough-preview.gif">
+                
+                <span class="roboto-white card-text">Read more: </span> <span> <a href="https://medium.com/@raykimblerdev/how-i-made-my-first-game-in-two-weeks-51741f27c8d2" class="roboto-white card-text">https://medium.com/@raykimblerdev/how-i-made-my-first-game-in-two-weeks-51741f27c8d2</a></span>
+                <p class="roboto-white card-text">Taekwondough is an iOS rhythm game where you make pizza with karate kicks.<br>This was my first game project. I made it with some academy peers in 2 weeks. I spent the first week learning music theory and making 3 tracks for the game. The next week I spent working on the mechanics,
+                such as timing the ingredients (or notes) to the tempo of the music, gaining points and multipliers, and a lifeline system.</p>
+            </div>
+
+            <div id="DYSCRASIA" class="card-block">
+                <p class="roboto-white card-title">Dyscrasia (WIP)</p>
+                <img class="card-image" src="dyscrasia-preview.png">
+                
+                <p ></p>
+            </div>
+
+            
+
+
         </div>
+
         
-        <div id="About Me" style="margin-top: 10px; margin: auto; text-align: center">
-            <span class="roboto-white" style="font-size: 80px;">Hi!</span>
-            <span class="roboto-white" style="font-size: 30px;"> I'm Ray Kimbler; a game developer, drummer, and videogame enjoyer currently based in Italy. <br> I studied game development and design at Apple Developer Academy in Naples and have been working on game projects since. <br> Experience in programming game systems and UI, mainly on Unity. <br> Practice makes perfect: that's why I never stop making games - be it for work or on my time. </span>
-        </div>
-
-        <div id="Experience and Projects" class="horizontal-group" style="margin-top: 1%;">
-            <div style="margin-left: 5%; margin-right: 5%;">
-                
-                <h2 class="roboto-white" style="font-weight: 600; font-size: 55px;">Experience</h2>
-
-                <div class="horizontal-group" style="width: 100%; background-color: var(--lightpurple); border-radius: 12px; padding: 12px; margin-bottom: 2%; justify-content: flex-start">
-                    <img src="era-one-preview.png" width="128px" height="128px" style="border-radius: 8px">
-                    <div class="vertical-group" style="margin-left: 12px;">
-                        <h2 class="roboto-white" style="font-weight: 500; font-size: 40px; line-height: 0.5; margin-top: 1%">Era One</h2>
-                        <h3 class="roboto-white" style="font-weight: 400; font-size: 20px; line-height: 0.5; margin-top: 1%">July 2023 - September 2024</h3>
-                        <p class="roboto-white" style="font-size: 20px; margin-top: 2%;">Unity 3D RTS where you build your fleet and base from scratch.<br>Primarely systems and UI.</p>
-                    </div>
-                </div>
-                
-
-            </div>
-            <div style="margin-right: 5%; margin-left: 5%;">
-                <h2 class="roboto-white" style="font-weight: 600; font-size: 55px">Projects</h2>
-
-                <div class="horizontal-group" style="width: 100%; background-color: var(--lightpurple); border-radius: 12px; padding: 12px; margin-bottom: 2%; justify-content: flex-start">
-                    <img src="dyscrasia-preview.png" width="128px" height="128px" style="border-radius: 8px; margin-left: 0px;">
-                    <div class="vertical-group" style="margin-left: 12px;">
-                        <h2 class="roboto-white" style="font-weight: 500; font-size: 40px; line-height: 0.5; margin-top: 1%">Dyscrasia (WIP)</h2>
-                        <p class="roboto-white" style="font-size: 20px; margin-top: 1%;">Brew potions and flatter royalty to reach your goals.</p>
-                    </div>
-                </div>
-                
-                <div class="horizontal-group" style="width: 100%; background-color: var(--lightpurple); border-radius: 12px; padding: 12px; margin-bottom: 2%; justify-content: flex-start">
-                    <img src="anne-phibian-preview.png" width="128px" height="128px" style="border-radius: 8px">
-                    <div class="vertical-group" style="margin-left: 12px;">
-                        <h2 class="roboto-white" style="font-weight: 500; font-size: 40px; line-height: 0.5; margin-top: 1%">Anne Phibian</h2>
-                        <p class="roboto-white" style="font-size: 20px; margin-top: 1%;">Investigate the misterious death of a journalist in a <br> retro futuristic world.</p>
-                    </div>
-                </div>
-
-                <div class="horizontal-group" style="width: 100%; background-color: var(--lightpurple); border-radius: 12px; padding: 12px; margin-bottom: 2%; justify-content: flex-start">
-                    <img src="taekwondough-preview.png" width="128px" height="128px" style="border-radius: 8px">
-                    <div class="vertical-group" style="margin-left: 12px;">
-                        <h2 class="roboto-white" style="font-weight: 500; font-size: 40px; line-height: 0.5; margin-top: 1%">Taekwondough</h2>
-                        <p class="roboto-white" style="font-size: 20px; margin-top: 1%;">iOS rhythm game where you make pizza with karate kicks.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div style="background-color: var(--darkred); width: 100%; height: 150px;">
-
-        </div>
-
-
+        
 
     </body>
 </html>
