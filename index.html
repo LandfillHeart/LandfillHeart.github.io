@@ -10,7 +10,7 @@
     <body>
         <div class="landfill-card">
             <!-- TITLE AND CONTACTS -->
-            <p class="roboto-lighttan card-title">Ray Kimbler - Game Programmer - Systems, UI, Unity</p>
+            <p class="roboto-tan card-title">Ray Kimbler - Game Programmer - Systems, UI, Unity</p>
             <p class="roboto-lighttan card-subtitle">Email: landfillheartdev@gmail.com <br>Discord: rayspizzashop</p>
             <!-- EXPERIENCE -->
             <p class="roboto-white card-title">Experience</p>
@@ -20,40 +20,39 @@
                 <iframe class="card-video-link" src="https://www.youtube.com/embed/x5wvsx79bVQ">
                 </iframe>
                 
-                
-                <br>
                 <p class="roboto-white card-subtitle">July 2023 - September 2024</p>
                 <br>
                 <p class="roboto-white card-text">I joined the team late in development, so I developed features that would best utilize existing systems and mechanics.<br> Some interesting things I did: </p>
+                <div class="card-section-margin"></div>
                 <p class="roboto-white card-subtitle">Systems</p>
-                <p class="roboto-white card-paragraph-title">Dynamic Music</p>
+                <p class="roboto-bloodorange card-paragraph-title">Dynamic Music</p>
                 <p class="roboto-white card-text">A Music Manager holds a playlist for ambience and combat.
                     When combat starts, the Music Manager is alerted and fades into the combat music playlist.
                     After a set amount of time, if no new combat event has been fired (which would mean combat is over), the music fades back into the ambience playlist.
                 </p>
-                <p class="roboto-white card-paragraph-title">Units Level Up with ECS</p>
+                <p class="roboto-bloodorange card-paragraph-title">Units Level Up with ECS</p>
                 <p class="roboto-white card-text">Units can get experience by killing enemies. Once they reach an experience threshold, they level up. The highest level unit of each category is assigned as leader, and gets stat bonuses. 
                     If the leader dies or another unit of the same category surpasses it in level, leadership is passed onto the new highest level unit.
                     To prevent leadership to be constantly changed during combat scenarios with high casualties and experience rewards, the assignment of leader happens only on a set timer. <br>
                     The level up system applies the ECS pattern: units (entities) provide access to their Experience script (component) which simply holds information processed by the Leadership Manager (system).
                 </p>
-
+                <div class="card-section-margin"></div>
                 <p class="roboto-white card-subtitle">UI</p>
-                <p class="roboto-white card-paragraph-title">Minimap</p>
+                <p class="roboto-bloodorange card-paragraph-title">Minimap</p>
                 <p class="roboto-white card-text">A minimap that can be used to see your units and detected enemies.
                     The minimap can be set on any friendly unit or base as an anchor, and everything is displayed relative to their distance to the minimap anchor.
                     Clicking on the minimap will take your camera to a position on the map, based on direction and distance relative to the minimap anchor.
                 </p>
-                <p class="roboto-white card-paragraph-title">Armor and Health Bars</p>
+                <p class="roboto-bloodorange card-paragraph-title">Armor and Health Bars</p>
                 <p class="roboto-white card-text">Building armor modules will increase the max health of other modules on your base. 
                     To display the difference between a module's health and the bonus health granted by armor, part of the health bar is green (base hp) and the other part is orange and black striped (bonus health). 
                     The size of these sections depends on the percentage of hp they provide to the total health of the module.
                 </p>
-                <p class="roboto-white card-paragraph-title">Camera Shortcuts</p>
+                <p class="roboto-bloodorange card-paragraph-title">Camera Shortcuts</p>
                 <p class="roboto-white card-text">Using the command panel, you can set a friendly or neutral unit as a camera anchor. This creates a button on your center bar, which will redirect the camera towards that unit when pressed.
                     If the button was created by selecting multiple units, a small +n icon will indicate how many units are part of that group. This icon updates when units die to represent the reduced number.
                 </p>
-                <p class="roboto-white card-paragraph-title">Game Events, Notifications, and Missions</p>
+                <p class="roboto-bloodorange card-paragraph-title">Game Events, Notifications, and Missions</p>
                 <p class="roboto-white card-text">Panels will let players see different kind of information, such as ongoing and beaten missions, messages from their crew about events such as enemy activity and the assignment of leaders, and game events such as construction states and combat. Some of these panels can be minimized to reduce screen clutter.
                     These and other UI elements will flash different at different intensities to alert the player, such as the missions panel flashing lightly when it has been minimized and a new mission has been assigned, or the energy and resource buttons flashing red when reaching critical conditions.
                 </p>

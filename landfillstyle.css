@@ -101,6 +101,11 @@ body {
     text-align: left;
     margin: auto;
     font-size: 20px;
+    line-height: 2.1;
+}
+
+.card-section-margin {
+    margin-bottom: 32px;
 }
 
 /* TEXT CLASSES */
@@ -114,6 +119,16 @@ body {
     color: var(--creamywhite);
 }
 
+.roboto-tan {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    line-height: 1.5;
+    color: var(--tan);
+}
+
 .roboto-lighttan {
     font-family: "Roboto", serif;
     font-optical-sizing: auto;
@@ -121,6 +136,36 @@ body {
     font-variation-settings:
       "wdth" 100;
     color: var(--lighttan);
+}
+
+.roboto-bloodorange {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    line-height: 1.5;
+    color: var(--bloodorange);
+}
+
+.roboto-darkred {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    line-height: 1.5;
+    color: var(--darkred);
+}
+
+.roboto-shadeblue {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    line-height: 1.5;
+    color: var(--shadeblue);
 }
 
 .title-font-details {
