@@ -23,8 +23,8 @@
                 <p class="roboto-white card-subtitle">July 2023 - September 2024</p>
                 <br>
                 <p class="roboto-white card-subtitle">Extended Game Systems</p>
-                <p class="roboto-white card-text">Using patterns such as Observer and ECS, I extended existing systems to add new functionality. <br>
-                    This includes Dynamic Music based on game events, a leveling system where units get EXP from combat, unique weapons with special functions such as EMPs, and gameplay objectives.
+                <p class="roboto-white card-text">Using patterns such as <b>Observer and ECS</b>, I extended existing systems to add new functionality. <br>
+                    This includes <b>Dynamic Music</b> based on game events, a <b>leveling system</b> where units get EXP from combat, unique weapons with special functions such as EMPs, and gameplay objectives.
                 </p>
                 
                 <p class="roboto-white card-subtitle">UI</p>
@@ -56,6 +56,19 @@
                 <p class="roboto-white card-text">A component lets you create a list of categories (mag, sights, grips, etc.) and assign meshes. Selecting a category tells the model which meshes should be edited by the color picker, and updates the other UI elements to show other customization options (in this case, alternate meshes for sights, mag, and barrels).</p>
             </div>
 
+            <div id="TPS-PROTOTYPE" class="card-block">
+                <p class="roboto-white card-title">Third Person Prototype</p>
+                <img class="card-image-wide" src="Prototype-Gif.gif">
+
+                <p class="roboto-white card-paragraph-title">One Week prototype for Third Person Camera, Movement, Inventory, Interactions.</p>
+                <span class="roboto-white card-text">github:</span> <span><a href="https://github.com/LandfillHeart/Prototipo-Interattivo" class="roboto-white card-text">https://github.com/LandfillHeart/Prototipo-Interattivo</a></span> <br>
+                <p class="roboto-white card-text">This project was a one week test for a company where I had to code a list of features. My main focus was the <b>extensibility</b> of the features - creating an architecture which goes beyond the one week prototype and could be used as a long-term solution. <br>
+                    This can be seen especially in the Interaction system, which heavily relies on the <b>Observer pattern to allow extension.</b> <br>
+                    An Interactable component features Events for successful and failed interactions, and other components subscribe to those events to allow actions such as opening doors and picking up items. <br>
+                    This kind of architecture, together with ECS, allowed me to <b>build robust systems and add features without refactoring.</b>
+                </p>
+            </div>
+
             <div id="ANNE-PHIBIAN" class="card-block">
                 <p class="roboto-white card-title">Anne Phibian</p>
                 <img class="card-image-wide" src="Anne-Phibian-Gif.gif">
@@ -72,20 +85,9 @@
                 <p class="roboto-white card-title">Taekwondough</p>
                 <img class="card-image-wide" src="taekwondough-preview.gif">
                 
-                <span class="roboto-white card-text">Read more: </span> <span> <a href="https://medium.com/@raykimblerdev/how-i-made-my-first-game-in-two-weeks-51741f27c8d2" class="roboto-white card-text">https://medium.com/@raykimblerdev/how-i-made-my-first-game-in-two-weeks-51741f27c8d2</a></span>
                 <p class="roboto-white card-text">Taekwondough is an iOS rhythm game where you make pizza with karate kicks.<br>This was my first game project. I made it with some academy peers in 2 weeks. I spent the first week learning music theory and making 3 tracks for the game. The next week I spent working on the mechanics,
                 such as timing the ingredients (or notes) to the tempo of the music, gaining points and multipliers, and a lifeline system.</p>
             </div>
-
-            <div id="DYSCRASIA" class="card-block">
-                <p class="roboto-white card-title">Dyscrasia (WIP)</p>
-                <img class="card-image" src="dyscrasia-preview.png">
-                
-                <p ></p>
-            </div>
-
-            
-
 
         </div>
         <!-- UNITY CANVAS -->
