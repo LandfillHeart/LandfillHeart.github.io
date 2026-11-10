@@ -1,0 +1,49 @@
+name: Deploy Blazor to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ] # Change to "master" if your default branch is master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x' # Update to match your .NET version (e.g., 8.0.x or 9.0.x)
+
+      - name: Publish Blazor WebAssembly app
+        run: dotnet publish -c Release -o release
+
+      - name: Fix routing for GitHub Pages (SPA fallback)
+        run: |
+          # GitHub Pages requires a 404.html fallback for client-side routing
+          cp release/wwwroot/index.html release/wwwroot/404.html
+          
+          # Add a .nojekyll file to prevent GitHub from ignoring files starting with underscores (like _framework)
+          touch release/wwwroot/.nojekyll
+
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'release/wwwroot'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
